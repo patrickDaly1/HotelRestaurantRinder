@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    script(src="https://polyfill.io/v3/polyfill.min.js?features=default")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    script. 
+      let map;
+      let markers = [];
+      let userMarker = [];
+    script(src="/javascripts/layout.js")
+  body
+    block content
+    button(id="buttonHotel" onclick="hotelButton()") Find Hotels Near You
+    button(id="buttonRestaurant" onclick="restaurantButton()") Find Restaurants Near You
+    button(id="buttonRemoveMarkers" onclick="removeMarkers()") Clear Markers
+    div(id="enterAddress")
+      input(id="addressInfo" placeholder="Address")
+      br
+      br
+      button(id="enterButton" onclick="enterAddress()") Enter
+    div(id="mapid")
+    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhJiDzY8i8lhGPnQxdmHLUenEmW1B6Etg&callback=initMap&libraries=&v=weekly")

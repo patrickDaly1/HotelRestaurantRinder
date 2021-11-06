@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  script. 
+    var lat = #{lat};
+    var lon = #{lon}; 
+    const defLat = #{lat};
+    const defLon = #{lon};
+  div(id="content")
+    h1= title
+    p 
+      | &nbsp;&nbsp;Welcome to #{title}. Use the buttons on
+      br
+      | &nbsp;&nbsp;the right to find your desired restaurant or hotel. Click on the
+      | &nbsp;&nbsp;markers for more information about the hotel or restaurant.
+      br
+      | &nbsp;&nbsp;Add your current address via the user entry to the side to 
+      br
+      | &nbsp;&nbsp;receive more accurate locations.
+      br
+      br
+      | &nbsp;&nbsp;Your location: red
+      br
+      | &nbsp;&nbsp;Hotel location: orange
+      br
+      | &nbsp;&nbsp;Restaurant location: green
+      script(src="/javascripts/layout.js")
+
