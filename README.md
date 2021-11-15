@@ -6,4 +6,5 @@ npm start
 Then navigate to: localhost:3000. 
 # Note
 This project initially used a docker image and an AWS 
-instance; however, this is too expensive to maintain. 
+instance; however, this is too expensive to maintain
+so now it is just an app that one can use locally.
